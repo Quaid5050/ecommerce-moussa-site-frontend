@@ -43,9 +43,9 @@ const SectionTopHeader = () => {
   }, []);
 
   return (
-    <nav className="relative bg-gray-800 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+    <nav className="bg-gray-800 relative text-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 justify-between">
           <div className="flex">
             {categories.map((category) => (
               <div
@@ -54,23 +54,26 @@ const SectionTopHeader = () => {
                 onMouseEnter={() => handleMouseEnter(category.name)}
                 onMouseLeave={handleMouseLeave}
               >
-                <button type='button' className="px-3 py-2 text-black rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                <button
+                  type="button"
+                  className="hover:bg-gray-700 focus:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium text-black focus:outline-none"
+                >
                   {category.name}
                 </button>
                 {activeCategory === category.name && (
                   <div
-                    className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-1 z-10"
+                    className="absolute left-0 top-full z-10 w-48 rounded-md bg-white py-1 shadow-lg"
                     onMouseEnter={() => handleMouseEnter(category.name)}
                     onMouseLeave={handleMouseLeave}
                   >
                     {category.subcategories.map((subcategory) => (
-                      <a
+                      <button
                         key={subcategory}
-                        href="#"
-                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+                        type="button"
+                        className="hover:bg-gray-100 block w-full px-4 py-2 text-left text-sm text-black"
                       >
                         {subcategory}
-                      </a>
+                      </button>
                     ))}
                   </div>
                 )}
