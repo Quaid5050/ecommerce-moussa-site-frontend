@@ -54,7 +54,7 @@ const SectionTopHeader = () => {
                 onMouseEnter={() => handleMouseEnter(category.name)}
                 onMouseLeave={handleMouseLeave}
               >
-                <button className="px-3 py-2 text-black rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                <button type='button' className="px-3 py-2 text-black rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
                   {category.name}
                 </button>
                 {activeCategory === category.name && (
