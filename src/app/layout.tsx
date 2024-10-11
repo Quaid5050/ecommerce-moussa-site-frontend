@@ -9,7 +9,7 @@ import Footer from '@/shared/Footer/Footer';
 import Loading from './loading';
 
 export const metadata: Metadata = {
-  title: 'Hotkicks Ecommerce Template',
+  title: 'GameStore Ecommerce',
   icons: [
     {
       rel: 'apple-touch-icon',
