@@ -221,10 +221,11 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        'absolute  h-8 w-8 rounded-full',
+        'absolute h-6 w-6 rounded-full', // Adjusted size for smaller screens
+        'sm:h-8 sm:w-8', // Bigger size for larger screens
         orientation === 'horizontal'
-          ? '-left-12 top-1/2 -translate-y-1/2'
-          : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
+          ? '-left-4 top-1/2 -translate-y-1/2 sm:-left-12' // Adjusting left position
+          : '-top-4 left-1/2 -translate-x-1/2 rotate-90 sm:-top-12', // Adjusting top position for vertical carousel
         className,
       )}
       disabled={!canScrollPrev}
@@ -250,10 +251,11 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        'absolute h-8 w-8 rounded-full',
+        'absolute h-6 w-6 rounded-full', // Adjusted size for smaller screens
+        'sm:h-8 sm:w-8', // Bigger size for larger screens
         orientation === 'horizontal'
-          ? '-right-12 top-1/2 -translate-y-1/2'
-          : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
+          ? '-right-4 top-1/2 -translate-y-1/2 sm:-right-12' // Adjusting right position for mobile
+          : '-bottom-4 left-1/2 -translate-x-1/2 rotate-90 sm:-bottom-12', // Adjusting bottom position for vertical carousel
         className,
       )}
       disabled={!canScrollNext}

@@ -50,6 +50,7 @@
         "project": "./tsconfig.json"
       },
       "rules": {
+        "no-param-reassign":"warn",
         "consistent-return": "off", // Disable consistent-return rule
         "jsx-a11y/control-has-associated-label": "off",
         "tailwindcss/no-custom-classname": "off",
