@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ['class'],
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontSize: {
@@ -20,7 +21,12 @@ module.exports = {
         secondary: '#000000',
         gray: '#eeeeee',
       },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
     },
   },
-  plugins: [require('@tailwindcss/forms')], // eslint-disable-line
+  plugins: [require('@tailwindcss/forms'), require("tailwindcss-animate")], // eslint-disable-line
 };

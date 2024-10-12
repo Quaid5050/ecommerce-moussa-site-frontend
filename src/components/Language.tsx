@@ -9,7 +9,7 @@ const languages = ['English', 'Francias', 'Espanyol'];
 const Language = () => {
   const [language, setLanguage] = useState('English');
   return (
-    <div className="font-medium">
+    <div className="relative z-30 font-medium">
       <Menu as="div" className="relative inline-block">
         <Menu.Button className="flex items-center gap-1">
           <span>{language}</span>

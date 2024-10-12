@@ -3,6 +3,7 @@ import React from 'react';
 import SectionBestDeals from '../SectionBestDeals';
 import SectionBrands from '../SectionBrands';
 import SectionHeader from '../SectionHeader';
+import SectionPlatformExplorer from '../SectionPlatformExplorer';
 import SectionProducts from '../SectionProducts';
 
 const page = () => {
@@ -12,8 +13,12 @@ const page = () => {
         <SectionHeader />
       </div>
 
-      <div className="mb-32">
+      <div className="mb-24">
         <SectionBestDeals />
+      </div>
+
+      <div className="mb-28">
+        <SectionPlatformExplorer />
       </div>
 
       <div className="mb-32">
