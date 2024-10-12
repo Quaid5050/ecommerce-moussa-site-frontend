@@ -49,5 +49,3 @@ export type BlogType = {
   tag: 'Style' | 'Fitting' | 'General';
   slug: string;
 };
-
-export type SupportedAuthProivderType = 'google';

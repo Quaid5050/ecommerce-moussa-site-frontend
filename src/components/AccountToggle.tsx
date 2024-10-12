@@ -5,14 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import React, { Fragment } from 'react';
-
-import type { SupportedAuthProviderType } from "@/data/types";
 import avatar from '@/images/avatar.png'; // Default avatar
 import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 const AccountToggle = () => {
   const { data: session, status } = useSession(); // Access session and status
 
-  const handleSignIn = (provider: SupportedAuthProviderType) => {
+  const handleSignIn = (provider: string) => {
     signIn(provider, { callbackUrl: "/" });
   };
 
