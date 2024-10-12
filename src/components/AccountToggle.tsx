@@ -38,20 +38,20 @@ const AccountToggle = () => {
                 {/* Google and Facebook Login Buttons */}
                 <div className="mt-4 flex flex-col">
                   <Link
-                    href='/login'
+                    href="/login"
                     className="hover:bg-gray-100 mb-2 flex items-center justify-center rounded-md border border-black py-2 transition duration-150 ease-in-out"
                   >
                     <span className="mr-2">Continue with Google</span>
                   </Link>
                   <Link
-                    href='/login'
+                    href="/login"
                     className="hover:bg-gray-100 mb-4 flex items-center justify-center rounded-md border border-black py-2 transition duration-150 ease-in-out"
                   >
                     <span className="mr-2">Continue with Facebook</span>
                   </Link>
                 </div>
 
-                <Link href='/login'>
+                <Link href="/login">
                   <div className="mb-2 w-full rounded-md bg-primary py-2 text-white transition duration-150 ease-in-out hover:bg-primary/80">
                     Sign In
                   </div>
@@ -60,7 +60,7 @@ const AccountToggle = () => {
                 <div className="text-gray-500 text-sm">
                   <p>Don't have an account?</p>
                   <Link
-                    href='/signup'
+                    href="/signup"
                     className="text-primary hover:text-primary/80 hover:underline"
                   >
                     Sign Up
@@ -70,7 +70,7 @@ const AccountToggle = () => {
             </div>
           </Menu.Items>
         </Transition>
-        <Link href='/signup' className="hidden text-sm lg:block">
+        <Link href="/signup" className="hidden text-sm lg:block">
           Clark Kent
         </Link>
       </div>

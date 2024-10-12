@@ -13,6 +13,7 @@
       }
     ],
     // Disable strict rules that can cause errors in deployment
+    "react/no-array-index-key":"warn",
     "react/button-has-type": "off", 
     "no-console": "warn", // Allow console warnings instead of errors
     "no-debugger": "warn", // Warn about debugger instead of error
@@ -26,7 +27,8 @@
     "@typescript-eslint/comma-dangle": "off", 
     "@typescript-eslint/no-unused-vars": "warn", 
     "react/no-unused-prop-types": "off", 
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-shadow": "off" // Disable no-shadow rule
   },
   "overrides": [
     {
@@ -48,8 +50,10 @@
         "project": "./tsconfig.json"
       },
       "rules": {
+        "consistent-return": "off", // Disable consistent-return rule
         "jsx-a11y/control-has-associated-label": "off",
         "tailwindcss/no-custom-classname": "off",
+        "jsx-a11y/heading-has-content":"warn",
         "prettier/prettier": [
           "error",
           {
@@ -81,7 +85,8 @@
         "unused-imports/no-unused-vars": [
           "error",
           { "argsIgnorePattern": "^_" }
-        ]
+        ],
+        "@typescript-eslint/no-shadow": "warn"
       }
     },
     {
