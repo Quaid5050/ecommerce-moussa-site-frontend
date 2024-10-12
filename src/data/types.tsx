@@ -1,6 +1,5 @@
 import type { StaticImageData } from 'next/image';
 
-export type AuthProviders = 'google';
 export type ProductType = {
   slug: string;
   shoeName: string;
@@ -50,3 +49,5 @@ export type BlogType = {
   tag: 'Style' | 'Fitting' | 'General';
   slug: string;
 };
+
+export type SupportedAuthProivderType = 'google';

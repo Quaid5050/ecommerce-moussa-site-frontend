@@ -6,15 +6,14 @@ import Link from 'next/link';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import React, { Fragment } from 'react';
 
-import { SupportAuthProviders } from '@/data/types';
+import type { SupportedAuthProviderType } from "@/data/types";
 import avatar from '@/images/avatar.png'; // Default avatar
-import ButtonCircle3 from '@/shared/Button/ButtonCircle3'; // Assuming you already have this component
-
+import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 const AccountToggle = () => {
   const { data: session, status } = useSession(); // Access session and status
 
-  const handleSignIn = (provider: SupportAuthProviders) => {
-    signIn(provider, { callbackUrl: '/' });
+  const handleSignIn = (provider: SupportedAuthProviderType) => {
+    signIn(provider, { callbackUrl: "/" });
   };
 
   const handleSignOut = () => {
@@ -85,7 +84,7 @@ const AccountToggle = () => {
                   <div className="mt-4 flex flex-col">
                     <button
                       type="button"
-                      onClick={() => handleSignIn('google')} // Use Google sign in
+                      onClick={() => handleSignIn("google")} // Use Google sign in
                       className="hover:bg-gray-100 mb-2 flex items-center justify-center rounded-md border border-black py-2 transition duration-150 ease-in-out"
                     >
                       <span className="mr-2">Continue with Google</span>
