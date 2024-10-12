@@ -1,6 +1,7 @@
 import '@/styles/global.css';
 
 import type { Metadata } from 'next';
+import { SessionProvider } from 'next-auth/react';
 import React, { Suspense } from 'react';
 
 import Header from '@/components/Header/Header';
@@ -44,8 +45,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="">
-        <Header />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+        <SessionProvider>
+          <Header />
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+        </SessionProvider>
         <Footer />
       </body>
     </html>
