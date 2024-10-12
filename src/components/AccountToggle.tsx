@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import React, { Fragment } from 'react';
 
-import type { SupportAuthProviders } from '@/data/types';
+import { SupportAuthProviders } from '@/data/types';
 import avatar from '@/images/avatar.png'; // Default avatar
 import ButtonCircle3 from '@/shared/Button/ButtonCircle3'; // Assuming you already have this component
 
