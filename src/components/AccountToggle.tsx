@@ -10,7 +10,7 @@ import avatar from '@/images/avatar.png'; // Default avatar
 import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 
 const AccountToggle = () => {
-  const { data: session, status } = useSession(); // Access session and status
+  const { data: session, status } = useSession();
 
   const handleSignIn = (provider: string) => {
     signIn(provider, { callbackUrl: '/' });

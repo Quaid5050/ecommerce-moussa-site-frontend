@@ -1,4 +1,3 @@
-import { SessionProvider } from 'next-auth/react';
 import React from 'react';
 
 import SectionBestDeals from './SectionBestDeals';
@@ -10,7 +9,6 @@ import SectionTopHeader from './SectionTopHeader';
 
 const page = () => {
   return (
-    <SessionProvider>
       <div>
         <div className="my-3">
           <SectionTopHeader />
@@ -35,7 +33,7 @@ const page = () => {
           <SectionBrands />
         </div>
       </div>
-    </SessionProvider>
+
   );
 };
 

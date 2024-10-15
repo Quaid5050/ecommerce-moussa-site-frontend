@@ -10,7 +10,7 @@ import {
 import { authConfig } from './auth.config';
 
 export const {
-  handlers: { GET, POST },
+  handlers,
   auth,
   signIn,
   signOut,
@@ -70,7 +70,7 @@ export const {
       // @ts-ignore
       session.userId = token.userId;
       // @ts-ignore
-      session.accessToken = token.access_token;
+      // session.accessToken = token.access_token;
       return session;
     },
   },
