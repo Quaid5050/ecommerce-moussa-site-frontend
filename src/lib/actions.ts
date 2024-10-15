@@ -11,7 +11,7 @@ export async function doSocialLogin(formData: any) {
   });
   console.log(action);
 }
-//TODO: Need to implement this function in client side as well
+// TODO: Need to implement this function in client side as well
 export async function doLogout() {
   await handleExistingAccessToken();
   await signOut({
