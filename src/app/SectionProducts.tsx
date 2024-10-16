@@ -2,11 +2,13 @@ import React from 'react';
 
 import Filter from '@/components/Filter';
 import ProductCard from '@/components/ProductCard';
-import { productsSection, shoes } from '@/data/content';
+import { productsSection } from '@/data/content';
+import { productsResponse } from '@/data/products';
 import ButtonPrimary from '@/shared/Button/ButtonPrimary';
 import Heading from '@/shared/Heading/Heading';
 
 const SectionProducts = () => {
+  const products = productsResponse?.products.slice(10, 20);
   return (
     <div className="container">
       <Heading isCenter isMain desc={productsSection.description}>
@@ -15,10 +17,10 @@ const SectionProducts = () => {
       <Filter />
 
       <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4">
-        {shoes.map((shoe) => (
+        {products.map((product) => (
           <ProductCard
-            key={shoe.shoeName}
-            product={shoe}
+            key={product?.kinguinId}
+            product={product}
             className="border-neutral-300"
           />
         ))}

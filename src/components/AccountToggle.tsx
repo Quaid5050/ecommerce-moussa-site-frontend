@@ -7,8 +7,9 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 import React, { Fragment } from 'react';
 
 import avatar from '@/images/avatar.png'; // Default avatar
+import { doLogout } from '@/lib/actions';
 import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
-import { doLogout } from "@/lib/actions"
+
 const AccountToggle = () => {
   const { data: session, status } = useSession();
 
@@ -22,7 +23,7 @@ const AccountToggle = () => {
     signOut({
       redirect: false,
     });
-    doLogout()
+    doLogout();
   };
 
   if (status === 'loading') {

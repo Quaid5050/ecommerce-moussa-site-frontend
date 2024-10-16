@@ -31,6 +31,12 @@ export default bundleAnalyzer({
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
   poweredByHeader: false,
