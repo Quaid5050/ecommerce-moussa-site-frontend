@@ -1,19 +1,19 @@
 import React from 'react';
 
 import ProductCard from '@/components/ProductCard';
-import { shoes } from '@/data/content';
+import { productsResponse } from '@/data/products';
 import Heading from '@/shared/Heading/Heading';
 
 const SectionMoreProducts = () => {
+  const products = productsResponse?.products.slice(13, 19);
   return (
     <div>
       <Heading className="mb-0">Explore more products</Heading>
-
       <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4">
-        {shoes.slice(4, 13).map((shoe) => (
+        {products.map((product) => (
           <ProductCard
-            key={shoe.shoeName}
-            product={shoe}
+            key={product?.kinguinId}
+            product={product}
             className="border-neutral-300"
           />
         ))}

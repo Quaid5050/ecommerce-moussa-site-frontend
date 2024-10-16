@@ -33,6 +33,7 @@ export const fetchBackendForUser = async (
     throw new Error(`Error fetching backend for user: ${error.message}`);
   }
 };
+// TODO : NEED TO IMPLEMENT THIS IN CLIENT SIDE AS WELL
 export const handleExistingAccessToken = async () => {
   const existingToken = cookies().get('accessToken')?.value;
   console.log(`Existing token : ${existingToken}`);

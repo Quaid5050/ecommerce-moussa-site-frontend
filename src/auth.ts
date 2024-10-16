@@ -9,12 +9,7 @@ import {
 
 import { authConfig } from './auth.config';
 
-export const {
-  handlers: { GET, POST },
-  auth,
-  signIn,
-  signOut,
-} = NextAuth({
+export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
   providers: [
     GoogleProvider({
@@ -70,7 +65,7 @@ export const {
       // @ts-ignore
       session.userId = token.userId;
       // @ts-ignore
-      session.accessToken = token.access_token;
+      // session.accessToken = token.access_token;
       return session;
     },
   },

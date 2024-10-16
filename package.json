@@ -61,6 +61,7 @@
     "react-icons": "^4.11.0",
     "react-swipeable": "^7.0.1",
     "react-use": "^17.4.0",
+    "server-only": "^0.0.1",
     "sharp": "^0.32.6",
     "swr": "^2.2.5",
     "tailwind-merge": "^2.5.3",

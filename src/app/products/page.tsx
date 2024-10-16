@@ -4,9 +4,10 @@ import { MdOutlineFilterList, MdSearch } from 'react-icons/md';
 
 import ProductCard from '@/components/ProductCard';
 import SidebarFilters from '@/components/SideBarFilter';
-import { shoes } from '@/data/content';
+import { productsResponse } from '@/data/products';
 import ButtonSecondary from '@/shared/Button/ButtonSecondary';
 import Input from '@/shared/Input/Input';
+import type { Product } from '@/types/product';
 
 import SectionBrands from '../SectionBrands';
 
@@ -42,8 +43,8 @@ const page = () => {
             </div>
           </div>
           <div className="grid flex-1 gap-x-8 gap-y-10 sm:grid-cols-2 xl:grid-cols-3 ">
-            {shoes.map((item) => (
-              <ProductCard showPrevPrice product={item} key={item.slug} />
+            {productsResponse?.products.map((item: Product) => (
+              <ProductCard showPrevPrice product={item} key={item.kinguinId} />
             ))}
           </div>
         </div>

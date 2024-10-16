@@ -7,17 +7,23 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 import React, { Fragment } from 'react';
 
 import avatar from '@/images/avatar.png'; // Default avatar
+import { doLogout } from '@/lib/actions';
 import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
 
 const AccountToggle = () => {
-  const { data: session, status } = useSession(); // Access session and status
+  const { data: session, status } = useSession();
 
   const handleSignIn = (provider: string) => {
-    signIn(provider, { callbackUrl: '/' });
+    signIn(provider, {
+      callbackUrl: '/',
+    });
   };
 
   const handleSignOut = () => {
-    signOut({ callbackUrl: '/' });
+    signOut({
+      redirect: false,
+    });
+    doLogout();
   };
 
   if (status === 'loading') {

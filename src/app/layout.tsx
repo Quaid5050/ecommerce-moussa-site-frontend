@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="">
-        <SessionProvider>
+        <SessionProvider refetchOnWindowFocus={false}>
           <Header />
           <Suspense fallback={<Loading />}>{children}</Suspense>
         </SessionProvider>
